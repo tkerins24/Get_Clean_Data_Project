@@ -71,6 +71,6 @@ long_dataset <-  melt(complete_dataset, id = c("subject", "activity"))
 tidy_dataset <- dcast(long_dataset, subject + activity ~ variable, mean)
 
 #Write dataset to table
-write.table(tidy_dataset, "tidy_dataset", row.names = FALSE, quote = FALSE)
+write.table(tidy_dataset, "tidy_dataset.txt", row.names = FALSE, quote = FALSE)
 
 
